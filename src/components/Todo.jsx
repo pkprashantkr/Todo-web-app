@@ -53,6 +53,14 @@ function Todo({ darkMode }) {
     localStorage.setItem("todos", JSON.stringify(todoList));        
   }, [todoList]);                    
 
+
+  //Function to add todo item when enter key is pressed
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      add();
+    }
+  };
+
   return (
     <div
       className={`${
@@ -72,7 +80,8 @@ function Todo({ darkMode }) {
         } rounded-full`}
       >
         <input
-          ref={inputRef}
+          ref={inputRef}             //Ref for input box to access the input value
+          onKeyDown={handleKeyDown}  //Adding event listener for enter key
           className={`bg-transparent border-0 outline-none flex-1 h-14 pl-7 pr-2 placeholder:text-slate-400 ${
             darkMode ? "text-white placeholder:text-gray-300" : "text-black"
           }`}

@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div
-      className={`h-screen ${
+      className={`h-screen selection:bg-orange-200 ${
         darkMode ? "bg-gray-800 text-white" : "bg-gray-300 text-black"
       }`}
     >
