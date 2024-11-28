@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Todo from "./components/Todo";
 import { Moon, Sun } from "lucide-react";
+import logowhite from "./assets/white-logo.png";
+import logoblack from "./assets/black-logo.png";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,13 +19,18 @@ function App() {
   return (
     <div
       className={`h-screen ${
-        darkMode
-          ? "bg-gray-800 text-white"
-          : "bg-gray-500 text-black"
+        darkMode ? "bg-gray-800 text-white" : "bg-gray-300 text-black"
       }`}
     >
       {/* Dark Mode Toggle */}
-      <div className="flex justify-end p-4">
+      <div className="flex justify-between items-center p-4 mb-4">
+        <a href="/">
+          <img
+            src={darkMode ? logowhite : logoblack}
+            alt="logo"
+            className="w-28 h-5"
+          />
+        </a>
         <button
           onClick={() => setDarkMode(!darkMode)}
           className={`border-none rounded-full w-auto p-3 text-sm font-medium cursor-pointer ${
