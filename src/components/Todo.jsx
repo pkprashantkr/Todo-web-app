@@ -82,7 +82,7 @@ function Todo({ darkMode }) {
         <input
           ref={inputRef}             //Ref for input box to access the input value
           onKeyDown={handleKeyDown}  //Adding event listener for enter key
-          className={`bg-transparent border-0 outline-none flex-1 h-14 pl-7 pr-2 placeholder:text-slate-400 ${
+          className={`bg-transparent border-0 outline-none flex-1 h-14 pl-6 pr-2 placeholder:text-slate-400 ${
             darkMode ? "text-white placeholder:text-gray-300" : "text-black"
           }`}
           type="text"
@@ -90,7 +90,7 @@ function Todo({ darkMode }) {
         />
         <button
           onClick={add}
-          className="border-none rounded-full bg-orange-500 hover:bg-orange-400 w-28 h-14 text-white text-lg font-medium cursor-pointer"
+          className="border-none rounded-full bg-orange-500 hover:bg-orange-400 w-24 h-12 mr-1 text-white text-lg font-medium cursor-pointer"
         >
           Add +
         </button>

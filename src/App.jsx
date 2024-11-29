@@ -28,18 +28,18 @@ function App() {
           <img
             src={darkMode ? logowhite : logoblack}
             alt="logo"
-            className="w-28 h-5"
+            className="w-36 h-6 pl-2"
           />
         </a>
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className={`border-none rounded-full w-auto p-3 text-sm font-medium cursor-pointer ${
+          className={`border-none rounded-full w-auto p-2 cursor-pointer ${
             darkMode
               ? "bg-gray-600 text-white hover:bg-gray-500"
-              : "bg-gray-200 text-black hover:bg-gray-300"
+              : "bg-gray-200 text-black hover:bg-gray-100"
           }`}
         >
-          {darkMode ? <Sun /> : <Moon />}
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </button>
       </div>
 
